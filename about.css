@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1b1b;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.6;
+  padding-top: 4rem;
+  overflow-x: hidden;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 50px;
+}
+
+.brand {
+  color: rgb(255, 255, 255);
+  font-weight: 1000;
+  font-size: 1.2rem;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: rgb(245, 34, 34);
+}
+
+.site-nav a.active {
+  color: red;
+  font-weight: bold;
+  border-bottom: 2px solid #f52222;
+}
+
+#about,
+#harga {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: min(90%, 800px);
+  justify-content: center;
+}
+
+#about::before {
+  content: "";
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("images/mlbb.jpg") center/cover;
+  filter: blur(10px);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+#about h2 {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  margin-bottom: 2.5rem;
+  padding-bottom: 4px;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 35px blueviolet;
+  width: max-content;
+  z-index: 2;
+}
+
+#harga h2 {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  padding-bottom: 4px;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 35px blueviolet;
+  width: max-content;
+  z-index: 2;
+}
+
+.abt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  z-index: 2;
+}
+
+#about img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero {
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 15px whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#harga table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid rgba(0, 0, 0, 0.521);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+thead th {
+  background: rgba(20, 4, 238, 0.062);
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(252, 252, 0, 0.212);
+}
+
+#harga p {
+  margin-top: 1.5rem;
+  text-align: justify;
+}
+
+.site-footer {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
+.site-footer a {
+  color: #f52222;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+  }
+  #about h2 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+  #harga h2 {
+    font-size: 1.3rem;
+  }
+  .brand {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
